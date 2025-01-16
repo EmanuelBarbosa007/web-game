@@ -1,0 +1,175 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 60px; 
+}
+
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.status-esquerda {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.status-esquerda .saude {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.saude-paciente,
+.saude-doutor {
+  margin-bottom: 20px; 
+}
+
+.saude-paciente span,
+.saude-doutor span {
+  font-weight: bold;
+  color: black; 
+}
+
+.barra {
+  background-color: #fff;  
+  width: 150px; 
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.progresso {
+  height: 100%;
+}
+
+
+.saude-paciente .barra {
+  background-color: #fff;
+}
+
+.saude-paciente .progresso {
+  background-color: #4caf50;  
+}
+
+
+.saude-doutor .progresso {
+  background-color: #4caf50;  
+}
+
+
+.status-direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contador-tempo {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.botao-dossie {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.emoji-topo {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 60px;
+}
+
+
+.area-jogo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100% - 150px); 
+  padding: 20px;
+}
+
+
+.imagem-jogador,
+.imagem-paciente {
+  width: 150px;
+  height: 150px;
+}
+
+
+.acoes-esquerda,
+.acoes-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tempo-final {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ff6600;
+}
+
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+#ranking {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#ranking-lista {
+  margin-bottom: 10px;
+}
+
+#ranking button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ranking button:hover {
+  background-color: #45a049;
+}

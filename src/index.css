@@ -1,0 +1,258 @@
+
+body, html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/sala_tratamento.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.barra-superior {
+  position: absolute;
+  top: 20px;  
+  left: 20px; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.status-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.saude-paciente,
+.saude-jogador {
+  width: 250px; 
+}
+
+.saude-paciente span,
+.saude-jogador span {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.barra {
+  background-color: rgba(200, 200, 200, 0.7);
+  height: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progresso {
+  height: 100%;
+  width: 50%; 
+  background-color: #4caf50;
+}
+
+
+.estado-emocional {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+
+.imagem-jogador,
+.imagem-paciente {
+  position: absolute;
+  z-index: 1;
+  max-width: 200px;
+  max-height: 300px;
+  object-fit: contain;
+  bottom: 10%;  
+}
+
+.imagem-jogador {
+  left: 10%;  
+}
+
+.imagem-paciente {
+  right: 10%;  
+}
+
+
+.acoes-esquerda,
+.acoes-direita {
+  position: fixed; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10; 
+}
+
+.acoes-esquerda {
+  left: 10px; 
+}
+
+.acoes-direita {
+  right: 10px; 
+}
+
+.acoes-esquerda button,
+.acoes-direita button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  background-color: rgba(76, 175, 80, 0.9);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acoes-esquerda button:hover,
+.acoes-direita button:hover {
+  background-color: rgba(69, 160, 73, 0.95);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-conteudo {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-conteudo h2 {
+  margin-bottom: 15px;
+}
+
+.modal-conteudo button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-conteudo button:hover {
+  background-color: #45a049;
+}
+
+
+#ranking {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ranking-conteudo {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ranking-conteudo h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4caf50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ranking-conteudo ul {
+  list-style-type: none;
+  padding: 0;
+  color: #333;
+}
+
+.ranking-conteudo ul li {
+  font-size: 22px;
+  margin: 15px 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+.ranking-conteudo button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.ranking-conteudo button:hover {
+  background-color: #45a049;
+}
+
+
+#tempo,
+.botao-dossie {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#tempo {
+  margin-right: 10px;
+}
+
+.botao-dossie {
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+  z-index: 10;
+}
